@@ -1,0 +1,41 @@
+{
+  "name": "grocerystore",
+  "version": "1.0.0",
+  "description": "MERN fresh cart app",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "react-app-rewired start",
+    "server": "nodemon backend/server",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "data:import": "node backend/seeder",
+    "data:destroy": "node backend/seeder -d",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
+    "eject": "react-scripts eject"
+  },
+  "author": "Krishankant",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "chart.js": "^4.4.9",
+    "colors": "^1.4.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-async-handler": "^1.1.4",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.6",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.2",
+    "razorpay": "^2.9.6",
+    "react-chartjs-2": "^5.3.0"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "concurrently": "^5.3.0",
+    "customize-cra": "^1.0.0",
+    "nodemon": "^2.0.4",
+    "react-app-rewired": "^2.2.1"
+  }
+}
